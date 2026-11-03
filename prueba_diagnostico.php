@@ -7,6 +7,25 @@ $productosVectra = [
     ["nombre" => "MuñequerasVectra", "precio" => 17.00, "stock" => 17] // Este tiene más de 15, no debe salir
 ];
 
+function calcularValorTotal($ListadoProductos) {
+    // 1. Creamos una variable acumuladora que empieza en cero
+    $totalGeneral = 0;
+    
+    // 2. Recorremos cada producto del array que le pasemos
+    foreach ($ListadoProductos as $producto) {
+        // 3. Calculamos el valor de este producto específico (precio * stock)
+        $valorProducto = $producto['precio'] * $producto['stock'];
+        
+        // 4. Lo sumamos al acumulador total
+        $totalGeneral = $totalGeneral + $valorProducto; // O también se puede escribir: $totalGeneral += $valorProducto;
+    }
+    
+    // 5. Devolvemos el total ya sumado
+    return $totalGeneral;
+    
+}
+$valorTotal = calcularValorTotal($productosVectra);
+
 // 2. La función que filtra y devuelve la "caja" con los productos críticos
 function obtenerProductosCriticos($listadoProductos)
 {
@@ -16,7 +35,7 @@ function obtenerProductosCriticos($listadoProductos)
         // Si el stock es menor a 15...
         if ($producto['stock'] < 15) {
             // ¡Lo metemos dentro de nuestra caja!
-            $alertaReposicion[] = $producto;
+        $alertaReposicion[] = $producto;
         }
     }
 
@@ -47,7 +66,11 @@ $productosAReponer = obtenerProductosCriticos($productosVectra);
                 tiene un stock crítico de <strong><?php echo $item['stock']; ?></strong> unidades.
             </li>
         <?php endforeach; ?>
+
     </ul>
+    <p><strong>Valor total del inventario en la tienda: </strong> 
+    <?php echo $valorTotal; ?> €
+</p>
 
 </body>
 
