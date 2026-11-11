@@ -1,58 +1,58 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ⚡ VECTRA | High Performance Strength Equipment
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Aplicación web Full Stack desarrollada con **Laravel (PHP)** y **Tailwind CSS**, diseñada como plataforma comercial y panel administrativo (CRUD) para equipamiento deportivo de alta resistencia.
 
-## About Laravel
+![PHP Version](https://img.shields.io/badge/PHP-8.5-blue?style=flat-square&logo=php)
+![Laravel Version](https://img.shields.io/badge/Laravel-11-red?style=flat-square&logo=laravel)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css)
+![Status](https://img.shields.io/badge/Status-Completado-success?style=flat-square)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Sobre el Proyecto
+**VECTRA** nace con el objetivo de fusionar un backend robusto y estructurado con una experiencia de usuario (UX) moderna, minimalista y de estética industrial. El sistema permite gestionar un inventario completo de productos deportivos mediante operaciones CRUD (Crear, Leer, Actualizar y Borrar), complementado con una portada comercial interactiva orientada a la conversión.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠️ Tecnologías y Arquitectura
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend:** PHP 8.5, Laravel framework (Enrutamiento, Controladores y Eloquent ORM).
+- **Base de Datos:** SQLite / MySQL para la persistencia del inventario de productos.
+- **Frontend:** Blade Templates, Tailwind CSS (Utility-first CSS) y JavaScript Vanilla para la manipulación del DOM y modales interactivos.
+- **Iconografía:** Lucide Icons.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🌟 Características Principales
 
-## Agentic Development
+1. **Panel de Gestión (CRUD Completo):**
+   * Listado dinámico de productos con control de stock y precios.
+   * Formulario de creación de nuevos artículos.
+   * Vista de edición con carga de registros por ID.
+   * Acciones de actualización en base de datos y borrado seguro de registros.
+   * Buscador integrado en tiempo real mediante consultas `LIKE` de SQL.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+2. **Portada Comercial Interactiva (`welcome`):**
+   * **Barra superior deslizante (Ticker):** Anuncios promocionales en movimiento continuo mediante animaciones CSS (`@keyframes`).
+   * **Carrusel Hero automático:** Slides dinámicos controlados por temporizadores en JavaScript.
+   * **Navegación Lateral Desplegable:** Accesos directos a secciones clave (*Catálogo de Fuerza*, *Novedades 2026*, *Soporte Técnico*).
+   * **Modales Flotantes:** Ventanas modales nativas sin recarga de página para Búsqueda Global, Inicio de Sesión de Miembros y Carrito de Compras.
 
-```bash
-composer require laravel/boost --dev
+---
 
-php artisan boost:install
-```
+## 📂 Estructura del Código Clave
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+- `routes/web.php` $\rightarrow$ Mapa de rutas de la aplicación que gestiona tanto las peticiones del CRUD como la inyección de variables a la portada principal.
+- `app/Http/Controllers/ProductController.php` $\rightarrow$ Controlador encargado de manejar la lógica de negocio para listar, guardar, actualizar y eliminar productos.
+- `resources/views/welcome.blade.php` $\rightarrow$ Vista principal del e-commerce que integra la estructura visual en Tailwind, modales y lógica de interacción en JavaScript.
+- `resources/views/inventario/` $\rightarrow$ Vistas Blade dedicadas al panel de administración y tablas de gestión de stock.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 💻 Instalación y Puesta en Marcha Local
 
-## Code of Conduct
+Si deseas clonar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clona el repositorio:
+   ```bash
+   git clone [https://github.com/sergioamunoz/vectra-equipment.git](https://github.com/sergioamunoz/vectra-equipment.git)
